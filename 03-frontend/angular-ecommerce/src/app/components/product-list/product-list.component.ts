@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductListComponent implements OnInit {
 
    products: Product[] = [];
-   currentCategoryId: number | undefined;
+   currentCategoryId: number =1
    searchMode: boolean = false;
 
   constructor(private productListService: ProductService , private route: ActivatedRoute) { }
