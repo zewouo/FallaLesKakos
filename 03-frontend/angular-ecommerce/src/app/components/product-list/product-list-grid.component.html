@@ -5,20 +5,21 @@
     <div class="container-fluid">
       <div class="row">
 
-            <div *ngFor="let tempProduct of products" class="col-md-3">
+            <div *ngFor="let tempProduct of products" class="card Medium col-md-3">
 
-              <div class="product-box">
+                <div routerLink="/products/{{tempProduct.id}}" class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="{{tempProduct.imageUrl}}">
+                </div>
 
-                <a routerLink="/products/{{tempProduct.id}}">
-                  <img src="{{tempProduct.imageUrl}}" class="img-responsive">
-                </a>
+                  <hr>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><a routerLink="/products/{{tempProduct.id}}">{{tempProduct.name}}</a></span>
 
-                 <a routerLink="/products/{{tempProduct.id}}">
-                    <h1>{{tempProduct.name}}</h1>
-                  </a>
                     <div class="Price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
                     <a href="#" class="primary-btn">Add to cart</a>
-              </div>
+                  </div>
+
+
             </div>
            <!-- if products empty then display a message-->
            <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
