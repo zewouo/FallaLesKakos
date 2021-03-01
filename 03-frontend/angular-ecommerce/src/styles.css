@@ -540,6 +540,7 @@ input.au-input.au-input-xl{
   margin-bottom:60px
 }
 .price{
+  height: 40px;
   margin:15px 0 0;
   font-weight:800;
   color:#0da8e4
