@@ -6,18 +6,20 @@
                 <!-- loop over the collection of products -->
                 <div *ngFor="let tempProduct of products" class="  col-md-3">
 
-                    <div class=" card product-box">
-
+                    <div class="product-box">
+                      <div class="card grey lighten-3">
                         <a class ="card-image" routerLink="/products/{{ tempProduct.id }}">
                             <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
                         </a>
 
                         <a  routerLink="/products/{{ tempProduct.id }}">
-                            <h1 class ="card-content">{{ tempProduct.name }}</h1>
+                            <h1 class =" left card-content">{{ tempProduct.name }}</h1>
                         </a>
 
                         <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
+                      </div>
                         <button  class="btn btn-primary btn-sm">Add to cart</button>
+
                     </div>
 
                 </div>
@@ -52,7 +54,7 @@
                                 <span>Page Size:</span>
                                 <select (change)="updatePageSize($event)">
                                     <option value="2">2</option>
-                                    <option value="5" selected="true">5</option>
+                                    <option value="5" >5</option>
                                     <option value="10">10</option>
                                     <option value="20">20</option>
                                     <option value="50">50</option>

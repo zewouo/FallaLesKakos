@@ -1,10 +1,12 @@
 
-<div class="details-section ">
+<div class="  details-section ">
   <div  class="container-fluid ">
-    <img src="{{product?.imageUrl}}" class ="detail-img">
+    <div class="card grey lighten-3">
+    <img  src="{{product?.imageUrl}}" class ="detail-img">
 
       <h3>{{product?.name }}</h3>
       <div class ="price">{{product?.unitPrice |currency:'USD'}}</div>
+    </div>
       <a href="#" class = "primary-btn">Add to card</a>
 
       <hr>
